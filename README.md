@@ -10,3 +10,22 @@ Link to dataset: [Efficient detection of fake Twitter followers](http://mib.proj
 1. Data preprocessing removing NaN etc.
 2. Model Training and Accuracy = Decision Tree Classfication 
 3. Creation of pickle file
+
+## Features to be passed as Parameters
+
+['name_wt',
+ 'statuses_count',
+ 'followers_count',
+ 'friends_count',
+ 'favourites_count',
+ 'listed_count']
+ 
+ and will return `label` value which would indicate fake or genuine/true Twitter user.
+ 
+<h1 align="center"><img src="https://user-images.githubusercontent.com/50984984/129464986-95e8459c-c2e2-4e48-b277-a8a8a1fe2cab.png"/></h1>
+
+## Requirements:
+
+1. Function to calc `name_wt` to be passed in as parameter
+2. Frontend
+3. Server Flask
