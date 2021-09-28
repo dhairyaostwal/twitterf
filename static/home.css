@@ -140,7 +140,7 @@ p{
     height: 96vh;
     width: auto;
     right: 50px;
-    top: 90px;
+    top: 0px;
     z-index: -1;
 }
 #verify{
@@ -483,7 +483,7 @@ footer{
         width: 350px;
         height: auto;
         left: 111px;
-        top: 238px;
+        top: 148px;
     }
     #inputContainer{
         width: 90vw;
