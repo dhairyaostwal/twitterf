@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../static/home.css">
+    <script src="./../static/home.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="leftnav">
+            <img src="./../static/verified 1.png">
+        </div>
+        <div id="rightnav">
+            <a href="#home">Home</a>
+            <a href="#inputContainer">Verify Account</a>
+            <a href="#about">About</a>
+            <div id="login">
+                <img src="./../static/Vector.svg">
+            </div>
+            <img onclick="hidenav()" id="closemenu" src="./../static/close 1.svg">
+        </div>
+        <div id="mobilenav" onclick="shownav()">
+            <img src="./../static/menu 1.svg">
+        </div>
+    </div>
+    <div id="home">
+        <div id="tittleText">
+            <h1>Check the Auntenticity of any Twitter Account</h1>
+            <p>Verify the authenticity of any twitter account with the click of button using our machine learning based profile verification system.</p>
+            <div id="homeButtons">
+                <a href="#inputContainer" id="tryNow">Try Now</a>
+                <a href="#about">Know More</a>
+            </div>
+        </div>
+        <img src="./../static/2414 copy.png">
+    </div>
+    <div id="verify">
+        <div id="inputContainer">
+            <form>
+                <input placeholder="Enter the Username here..." type="text">
+                <button type="submit">Verify</button>
+            </form>
+        </div>
+        <div id="outputContainer">
+            <img id="loading" src="./../static/Group 2 (1).png">
+            <div class="output">
+                <span>
+                    <p>Username</p>
+                    <p class="result real" onclick="showpop('real')">Real</p>
+                </span>  
+            </div>
+            <div class="output">
+                <span>
+                    <p>Username</p>
+                    <p class="result fake" onclick="showpop('fake')">Fake</p>
+                </span>  
+            </div>
+            <div class="output">
+                <span>
+                    <p>Username</p>
+                    <p class="result bot">Bot</p>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <h2>How does it Work?</h2>
+        <div id="stepContainer">
+            <div class="step">
+                <div class="circle"><span><img src="./../static/icons8-user-location-100 1.png"></span></div>
+                <p>Enter the username of the twitter account</p>
+            </div>
+            <div class="step reverse">
+                <div class="circle"><span><img src="./../static/icons8-change-user-100 1.png"></span></div>
+                <p>Let our machine learning model verify the profile</p>
+            </div>
+            <div class="step">
+                <div class="circle"><span><img src="./../static/icons8-instagram-verification-badge-150 1.png"></span></div>
+                <p>Get the results : is the account is legit or not</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        ©2021 twitterf. All Rights Reserved.
+    </footer>
+    <div class="popUp" id="real">
+        <div class="popBox">
+            <span>
+                <div class="svgContainer">
+                    <svg viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M241.851 134.958L266.101 111.225C273.33 104.381 269.959 92.2196 260.478 89.952L227.44 81.5198L236.753 48.8165C239.385 39.4098 230.515 30.5372 221.111 33.1697L188.419 42.4863L179.99 9.43714C177.76 0.103679 165.462 -3.30982 158.725 3.81143L135 28.2496L111.275 3.81196C104.615 -3.22861 92.2662 -0.00284543 90.0102 9.43766L81.5811 42.4868L48.8884 33.1702C39.4822 30.5367 30.6154 39.4124 33.2469 48.8171L42.5603 81.5203L9.52223 89.9525C0.0363687 92.2206 -3.32756 104.384 3.89811 111.225L28.148 134.958L3.89811 158.69C-3.33072 165.534 0.0400611 177.695 9.5217 179.963L42.5598 188.395L33.2464 221.098C30.6144 230.505 39.4843 239.378 48.8879 236.745L81.58 227.428L90.0091 260.478C92.35 270.273 104.614 273.143 111.274 266.103L135 241.845L158.725 266.103C165.316 273.216 177.702 270.051 179.99 260.478L188.419 227.428L221.111 236.745C230.517 239.379 239.384 230.503 236.753 221.098L227.439 188.395L260.477 179.963C269.962 177.694 273.326 165.531 266.101 158.69L241.851 134.958Z" fill="#44BBA4"/>
+                    </svg> 
+                    <img src="./../static/icons8-checkmark 1.png">
+                </div>
+                <h1 class="popTitle">Authentic Profile</h1>
+                <p class="result close" onclick="hidepop('real')">Okay</p>
+            </span>  
+        </div>
+    </div>
+    <div class="popUp" id="fake">
+        <div class="popBox">
+            <span>
+                <div class="svgContainer">
+                    <svg width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M241.851 134.958L266.101 111.225C273.33 104.381 269.959 92.2196 260.478 89.952L227.44 81.5198L236.753 48.8165C239.385 39.4098 230.515 30.5372 221.111 33.1697L188.419 42.4863L179.99 9.43714C177.76 0.103679 165.462 -3.30982 158.725 3.81143L135 28.2496L111.275 3.81196C104.615 -3.22861 92.2662 -0.00284543 90.0102 9.43766L81.5811 42.4868L48.8884 33.1702C39.4822 30.5367 30.6154 39.4124 33.2469 48.8171L42.5603 81.5203L9.52223 89.9525C0.0363687 92.2206 -3.32756 104.384 3.89811 111.225L28.148 134.958L3.89811 158.69C-3.33072 165.534 0.0400611 177.695 9.5217 179.963L42.5598 188.395L33.2464 221.098C30.6144 230.505 39.4843 239.378 48.8879 236.745L81.58 227.428L90.0091 260.478C92.35 270.273 104.614 273.143 111.274 266.103L135 241.845L158.725 266.103C165.316 273.216 177.702 270.051 179.99 260.478L188.419 227.428L221.111 236.745C230.517 239.379 239.384 230.503 236.753 221.098L227.439 188.395L260.477 179.963C269.962 177.694 273.326 165.531 266.101 158.69L241.851 134.958Z" fill="#FA7D93"/>
+                    </svg> 
+                    <img src="./../static/icons8-delete 1.png">
+                </div>
+                <h1 class="popTitle">Fake <br> Profile</h1>
+                <p class="result close" onclick="hidepop('fake')">Okay</p>
+            </span>  
+        </div>
+    </div>
+</body>
+</html>
