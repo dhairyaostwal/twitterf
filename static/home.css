@@ -13,7 +13,7 @@ a{
     text-decoration: none;
     color: unset
 }
-#navbar {/* Black background color */
+#navbar {
     position: fixed; /* Make it stick/fixed */
     top: 0; /* Stay on top */
     left: 0;
