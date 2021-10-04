@@ -16,10 +16,6 @@ const hidepop = (n) => {
   document.getElementById(n).style.display="none";
 }
 const shownav = () => {
-  document.getElementById("rightnav").style.display="flex";
-  document.getElementById("closemenu").style.display="flex";
-}
-const hidenav = () => {
-  document.getElementById("rightnav").style.display="none";
-  document.getElementById("closemenu").style.display="none";
+  document.getElementById("rightnav").classList.toggle('active');
+  document.getElementById("mobilenav").classList.toggle('active');
 }

@@ -416,16 +416,39 @@ footer{
 #fake{
     display: none;
 }
+#mobilenav div{
+    width: 80%;
+    margin-right: 20%;
+    height: 2px;
+    background-color: black;
+    transition: 0.3s;
+}
+#mobilenav div:last-child{
+    width: 60%;
+}
+#mobilenav.active div:first-child{
+    transform: translateY(calc( 30px / 3 )) rotateZ(-45deg);
+}
+#mobilenav.active div:last-child{
+    width: 80%;
+    transform: translateY(calc( -30px / 3 )) rotateZ(45deg);
+}
+#mobilenav.active div:nth-child(2){
+    opacity: 0;
+}
+
 @media only screen and (max-width: 768px) {
     #navbar{
         height: 60px;
     }
     #rightnav{
-        display: none;
+        display: flex;
+        opacity: 0;
+        transform: translateY(-15px);
         position: fixed;
         height: 300px;
         width: 100vw;
-        top: 0px;
+        top: 59px;
         left: 0px;
         background-color: #DFECED;
         border-bottom-left-radius: 10px;
@@ -434,9 +457,22 @@ footer{
         flex-direction: column;
         justify-content: space-evenly;
         z-index: 6;
+        transition: 0.3s;
+    }
+    #rightnav.active{
+        opacity: 1;
+        transform: translateY(0);
     }
     #mobilenav{
-        display: block;
+        display: flex;
+        width: 30px;
+        height: 30px;
+        margin:15px 0;
+        align-items: flex-end;
+        justify-content: space-around;
+        flex-direction: column;
+        box-sizing: border-box;
+        /* padding: 0 10%; */
     }
     #mobilenav img{
         height: 35px;
