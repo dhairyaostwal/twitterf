@@ -448,7 +448,7 @@ footer{
         position: fixed;
         height: 300px;
         width: 100vw;
-        top: 59px;
+        top: 0px;
         left: 0px;
         background-color: #DFECED;
         border-bottom-left-radius: 10px;
@@ -472,11 +472,15 @@ footer{
         justify-content: space-around;
         flex-direction: column;
         box-sizing: border-box;
+        z-index: 10;
         /* padding: 0 10%; */
     }
     #mobilenav img{
         height: 35px;
         width: auto;
+    }
+    #leftnav{
+        z-index: 10;
     }
     #leftnav img{
         width: 40px;
