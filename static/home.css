@@ -14,7 +14,7 @@ a{
     color: unset
 }
 #navbar {
-    position: fixed; /* Make it stick/fixed */
+    position: fixed; 
     top: 0; /* Stay on top */
     left: 0;
     width: 95%; /* Full width */
