@@ -24,6 +24,16 @@ Link to dataset: [Efficient detection of fake Twitter followers](http://mib.proj
  
 <h1 align="center"><img src="https://user-images.githubusercontent.com/50984984/129464986-95e8459c-c2e2-4e48-b277-a8a8a1fe2cab.png"/></h1>
 
+
+| parameters | in Twitter terms |
+|--|--|
+| status_count | number of tweets |
+|followers_count|followers|
+| friends_count | following |
+|favourite_count|no. of likes|
+|listed_count |no. of list |
+
+
 ## Requirements:
 
 1. Function to calc `name_wt` to be passed in as parameter
