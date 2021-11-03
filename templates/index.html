@@ -11,6 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
+<script>
+window.onload = function(){
+    showpop("{{res}}");
+}
+
+</script>
 <body>
     <div id="navbar">
         <div id="leftnav">
@@ -55,7 +61,7 @@
             <div id="output" onchange="showpop({{res}})">
                 <span>
                     <p>{{value}}</p>
-                    <p class="result {{res}}" >{{res}}</p>
+                    <p id="res" class="result {{res}}" >{{res}}</p>
                 </span>  
             </div>
         </div>

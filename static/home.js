@@ -11,6 +11,8 @@ window.onscroll = function() {
 }
 const showpop = (n) => {
   document.getElementById(n).style.display="flex";
+  var ele=document.getElementById("inputContainer");
+  ele.scrollIntoView();
 }
 const hidepop = (n) => {
   document.getElementById(n).style.display="none";
