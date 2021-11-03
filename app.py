@@ -54,6 +54,7 @@ def page_not_found(e):
 @app.route('/', methods=['POST'])
 def my_form_post():
     global username
+    global auth
     username = request.form['username']
     search_url = "https://api.twitter.com/1.1/users/show.json?screen_name="+username
     def connect_to_endpoint(url):
@@ -122,11 +123,16 @@ def my_form_post():
         mp = pickle.load(f)
     
     pickleTest = mp.predict(z)
-    if  pickleTest==1:
-        print("YES")
+    if  pickleTest==0:
+        auth='Real'
+        print("The value of pickleTest is")
+        print(pickleTest)
+        return render_template('index.html',value=screen_name)
     else:
-        print("NO")
-    return 'ok'
+        auth='Fake'
+        print("The value of pickleTest is")
+        return render_template('index.html',value1=screen_name)
+    
     
 
 
