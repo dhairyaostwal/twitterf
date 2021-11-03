@@ -127,11 +127,11 @@ def my_form_post():
         auth='Real'
         print("The value of pickleTest is")
         print(pickleTest)
-        return render_template('index.html',value=screen_name)
+        return render_template('index.html',res='real',value=screen_name)
     else:
         auth='Fake'
         print("The value of pickleTest is")
-        return render_template('index.html',value1=screen_name)
+        return render_template('index.html',res='fake',value=screen_name)
     
     
 

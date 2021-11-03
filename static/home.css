@@ -211,12 +211,12 @@ button[type="submit"]{
     align-items: center;
     transform: translateY(-30px);
 }
-.output{
+#output{
+    display: flex;
     background: linear-gradient(269.35deg, #44BBA4 17.38%, #1DA1F2 81.45%);
     width: 1044px;
     height: 97px;
     border-radius: 10px;
-    display: flex;
     justify-content: center;
     align-items: center;
     transition: 3s;
@@ -224,7 +224,7 @@ button[type="submit"]{
     font-size: 24px;
     font-weight: 600;
 }
-.output span{
+#output span{
     background: #fff;
     display: block;
     border-radius: 6px;
@@ -236,7 +236,7 @@ button[type="submit"]{
     justify-content: space-between;
     
 }
-.output:hover{
+#output:hover{
     background: linear-gradient(100.35deg, #44BBA4 17.38%, #1DA1F2 81.45%);   
 }
 .result{
@@ -545,13 +545,13 @@ footer{
         width: 30px;
         height: auto;
     }
-    .output{
+    #output{
         width: 90vw;
         height: 65px;
         margin: 20px 0px;
         font-size: 18px;
     }
-    .output span{
+    #output span{
         width: 98.5%;
         height: 59px;
         padding: 0px;
@@ -562,7 +562,7 @@ footer{
     p{
         font-size: 18px;
     }
-    .output p{
+    #output p{
         margin-left: 10px;
         margin-right: 10px;
     }
