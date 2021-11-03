@@ -1,4 +1,4 @@
-from flask import Flask, render_template , request
+from flask import Flask, render_template , request , abort
 import pickle
 import requests
 import os
@@ -44,6 +44,13 @@ def index():
     return render_template('index.html')
 
 
+
+@app.errorhandler(404)
+def page_not_found(e):
+    
+    return render_template("404error.html"),404
+
+
 @app.route('/', methods=['POST'])
 def my_form_post():
     global username
@@ -52,13 +59,9 @@ def my_form_post():
     def connect_to_endpoint(url):
         response = requests.request("GET", search_url, auth=bearer_oauth,)
         if response.status_code != 200:
-            raise Exception(
-                "Request returned an error: {} {}".format(
-                    response.status_code, response.text
-                )
-            )
+            abort(404,description="Not found.")
         return response.json()
-
+    
     url = search_url
     json_response = connect_to_endpoint(url)
     x=json.dumps(json_response, indent=4, sort_keys=True)
@@ -127,33 +130,10 @@ def my_form_post():
     
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @app.route('/predict')
 def predict():
     return "<h1>{{pickleTest}}</h1>"
+
 
 
 
