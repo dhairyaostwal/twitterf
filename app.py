@@ -125,12 +125,12 @@ def my_form_post():
     pickleTest = mp.predict(z)
     if  pickleTest==0:
         auth='Real'
-        print("The value of pickleTest is")
+        print("The value of pickleTest is", auth)
         print(pickleTest)
         return render_template('index.html',res='real',value=screen_name)
     else:
         auth='Fake'
-        print("The value of pickleTest is")
+        print("The value of pickleTest is", auth)
         return render_template('index.html',res='fake',value=screen_name)
     
     
